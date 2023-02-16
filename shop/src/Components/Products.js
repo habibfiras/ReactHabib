@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import products from '../products.json'
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 
 class Products extends Component {
     render() {
-        /*const productsList = this.props.products.map((product, index) => (
-            <Product
-        key={index}
-        name={product.name}
-        description={product.description}
-        image={product.image}
-            />
-        ));*/
         return (
-            <>
-                {products.map((product,index)=>
+            <Container>
+    
+    <Row className="justify-content-md-center">
+
+      {products.map((product,index)=>
+              <Col xs={6} md={4}>
+
                 <Product
                 key={index}
                 produit={product}>
 
-                </Product>)}
-            </>
+                </Product>
+                </Col>
+
+                )}
+    </Row>
+   
+    </Container>
+
+
         );
 };
 }
