@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import NotFound from './components/NotFound';
+import ProductDetails from './components/ProductDetails';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -11,6 +12,7 @@ root.render(
   <Router>
          <Routes>
          <Route exact path="/" element={<App />} />
+         <Route path="/produit/:id" element={<ProductDetails/>} />
          <Route path="/post" element={<App />} />
          <Route path="*" element={<NotFound/>} />
          </Routes>

@@ -1,10 +1,5 @@
-import React, { useState } from 'react';
-import { Alert, Button, Card } from 'react-bootstrap';
-import { Row, Col } from 'react-bootstrap';
-
-
+import React from 'react';
 const NotFound = () => {
-    const [show, setShow] = useState(true);
 
 
   return (
@@ -12,9 +7,10 @@ const NotFound = () => {
         <h1>
             not found
         </h1>
-  <img src='../assets/notfound.jfif'></img>
+  <img src='../assets/notfound.jfif' alt='..'></img>
     </div>
   );
 }
 
 export default NotFound;
+ 
